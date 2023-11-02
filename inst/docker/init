@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Host to listen to. In Docker, try using 0.0.0.0
+CRAN_HOST=${CRAN_HOST:-'http://127.0.0.1/'}
+
+# Which port to listen to.
+CRAN_PORT=${CRAN_PORT:-'1881'}
+
+# Local path to where the repository is stored
+CRAN_DIR=${CRAN_DIR:-"/srv/cran"}
+
+# Absolute path to the repository, as seen from the client:
+# I.e. http://localhost/CRAN_URL_PATH
+# Leave blank if not used
+# CRAN_URL_PATH=${CRAN_URL_PATH}
+
+# If static files should be served by something else, use
+# CRAN_REDIRECT_URL. Example:
+# CRAN_REDIRECT_URL=http://my-cran/cranny/cran
+# GET http://127.0.0.1/src/contrib/PACKAGES --> http://my-cran/cranny/cran/src/contrib/PACKAGES
+# CRAN_REDIRECT_URL=
+
+url_path=${CRAN_URL_PATH:+, url_path=\"$CRAN_URL_PATH\"}
+redirect_url=${CRAN_REDIRECT:+, redirect_url=\"$CRAN_REDIRECT\"}
+
+R -e "microCRAN::build(repo_dir = \"$CRAN_DIR\" $url_path $redirect_url) |> microCRAN::run(host = \"$CRAN_HOST\")"
