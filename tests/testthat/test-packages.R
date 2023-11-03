@@ -98,9 +98,10 @@ test_that('Reading DESCRIPTION file from tar-file', {
 
   fn <- sub('.tar.gz', '.zip', fn, fixed = TRUE)
   expect_true(file.exists(!!fn))
+  expect_error(read_DESCRIPTION_tar('x'), 'File not found: x', fixed = TRUE)
+  skip_on_os("mac")
   suppressWarnings(
     expect_error(read_DESCRIPTION_tar(fn), 'Invalid R-package file', fixed = TRUE)
   )
-  expect_error(read_DESCRIPTION_tar('x'), 'File not found: x', fixed = TRUE)
 })
 

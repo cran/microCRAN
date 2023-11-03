@@ -1,7 +1,7 @@
 Package: microCRAN
 Type: Package
 Title: Hosting an Independent CRAN Repository
-Version: 0.9.0
+Version: 0.9.0-1
 Authors@R: c(
     person("Stefan McKinnon", "Edwards", role=c("aut", "cre", "cph"), 
       email="sme@iysik.com", comment = c(ORCID = "0000-0002-4628-8148")),
@@ -24,10 +24,10 @@ Collate: 'handlers-static.R' 'miniCRAN.R' 'packages.R' 'handlers-.R'
         'api.R' 'microCRAN-package.R'
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2023-11-02 13:05:42 UTC; SMHE
+Packaged: 2023-11-03 15:28:22 UTC; smhe
 Author: Stefan McKinnon Edwards [aut, cre, cph]
     (<https://orcid.org/0000-0002-4628-8148>),
   Kamstrup A/S [cph]
 Maintainer: Stefan McKinnon Edwards <sme@iysik.com>
 Repository: CRAN
-Date/Publication: 2023-11-02 20:20:02 UTC
+Date/Publication: 2023-11-03 22:00:02 UTC

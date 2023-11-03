@@ -1,4 +1,4 @@
-997bbe04abf7adeeada2f5abba174fb8 *DESCRIPTION
+8da5fbbd470a0253ebece5b81fe71be4 *DESCRIPTION
 80d316d69004772d61b74810ab230c47 *NAMESPACE
 3081d4440b5b81fb3c0d974e24d762bb *R/api.R
 499471dfe80e717269aeb33ea4b30c8c *R/handlers-.R
@@ -30,4 +30,4 @@ ad388a44d4319e7f3f40e4d373ca725f *man/path_is_safe_for_cran.Rd
 f271211e86145ff2f457cb6808090829 *tests/testthat/helper-.R
 9bc664a116ae0cafda016062a791e609 *tests/testthat/test-handlers-.R
 02e40f597b3d5295328e4eaf7ff1c502 *tests/testthat/test-handlers-static.R
-579d625b2824845f017f9a34897fb5f7 *tests/testthat/test-packages.R
+6d711093c5ef4accfbe5be37c28148a5 *tests/testthat/test-packages.R
